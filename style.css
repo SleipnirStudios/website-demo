@@ -2,7 +2,11 @@ body {
     font-family: Helvetica, sans-seriff;
     margin: 0;
     padding: 20;
-    background: #F0E2E7;
+    background-image: url("images/LapLand.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #e2e3f0;
+    background-position: center top;
     color: #F0E2E7;
 }
 
@@ -252,6 +256,10 @@ h1 {
 
 @media (max-width: 600px)
 {
+    body {
+        background-size: auto 1200px;
+    }
+
     main {
         padding: 15px;
     }
