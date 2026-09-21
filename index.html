@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport"
+        content="width=device-width, initial-scale=1.0">
+
+        <title>Ruka Guest Guide</title>
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        >
+
+        <link rel="stylesheet"
+        href="style.css">
+    </head>
+
+    <body>
+
+        <main>
+
+            <header>TERVETULOA</header>
+
+            <section id="welcome">
+
+                <p id="accomodation-name"></p>
+
+                <p id="accomodation-addres"></p>
+
+                <p>
+                    Mukavaa, että olet täällä! Tästä oppaasta löydät kaiken tarvitsemasi
+                    majoituksesta ja lähialueesta
+                </p>
+
+            </section>
+
+            <nav id="main-navigation">
+
+                <button data-section="guide">
+                    <span>Majoitus</span>
+                </button>
+
+                <button data-section="map">
+                    <span>Paikallisopas</span>
+                </button>
+
+            </nav>
+
+            <section id="guide-section">
+
+                <header class="guide-header">Majoituksen tiedot</header>
+
+                <div id="info-panel"></div>
+
+                <div class="info-grid">
+
+                    <button class="info-card" data-info="arrival">
+                        <span>⚲</span>
+                        <strong>Saapuminen</strong>
+                    </button>
+
+                    <button class="info-card" data-info="wifi">
+                        <span>⌔</span>
+                        <strong>Wifi</strong>
+                    </button>
+
+                    <button class="info-card" data-info="checkin">
+                        <span>ꄗ</span>
+                        <strong>Sisäänkirjautuminen</strong>
+                    </button>
+
+                    <button class="info-card" data-info="rules">
+                        <span>🗐</span>
+                        <strong>Säännöt</strong>
+                    </button>
+
+                    <button class="info-card" data-info="parking">
+                        <span>✇</span>
+                        <strong>Pysäköinti</strong>
+                    </button>
+
+                    <button class="info-card" data-info="sauna">
+                        <span>♨</span>
+                        <strong>Sauna</strong>
+                    </button>
+
+                    <button class="info-card" data-info="contacts">
+                        <span>✆</span>
+                        <strong>Yhteystiedot</strong>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section id="map-section">
+
+                <header class="guide-header">Paikallisopas</header>
+
+                <div id="filters">
+                    <button data-category="Kaikki">Kaikki</button>
+                    <button data-category="Ruoka">Ruoka</button>
+                    <button data-category="Viihde">Viihde</button>
+                    <button data-category="Luonto">Luonto</button>
+                    <button data-category="Liikunta">Liikunta</button>
+                </div>
+            
+                <div id="map"></div>
+
+                <div id="place-list"></div>
+
+            </section>
+
+        </main>
+                
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+        </script>
+
+        <script src="places.js"></script>
+        <script src="guest-data.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>
